@@ -68,8 +68,7 @@ Shader "Unlit/NewDiffuseShader" //folder, and name
                 float3 finalSpec = pow(speculation, _Gloss) * _SpecIntense * _LightColor0;  //we have to multiply the spec color with light color in order for us to
 
                 float3 finalColor = col * lighting * finalSpec;
-
-                return fixed4(finalColor, 1); //for it to allow textures, i will need to multiply col, by it, and since its a fixed4 i need to add .rgb
+                return fixed4(1, 2, 3, 1); //for it to allow textures, i will need to multiply col, by it, and since its a
             }
             ENDCG
         }
